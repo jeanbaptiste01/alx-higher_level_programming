@@ -2,17 +2,23 @@
 import random
 
 number = random.randint(-10000, 10000)
+exe = 0
 
-# YOUR CODE HERE
+if number < 0:
+    number *= -1
+    exe = 1
 
-last_digit = abs(number) % 10
-is_negative = number < 0
+last_digit = number % 10
 
-print("Last digit of {} is {}{}".format(number, "-" if is_negative else "", last_digit), end=" ")
+if exe == 1:
+    number *= -1
+    last_digit *= -1
+
+print("Last digit of {:d} is ".format(number), end="")
 
 if last_digit > 5:
-    print("and is greater than 5")
+    print("{:d} and is greater than 5".format(last_digit))
 elif last_digit == 0:
-    print("and is 0")
+    print("{:d} and is 0".format(last_digit))
 else:
-    print("and is less than 6 and not 0")
+    print("{:d} and is less than 6 and not 0".format(last_digit))
