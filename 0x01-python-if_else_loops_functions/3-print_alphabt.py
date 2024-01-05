@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
+output = ""
+
 for i in range(ord('a'), ord('z') + 1):
     if chr(i) not in ('q', 'e'):
-        print("{:s}".format(chr(i)), end="")
+        output += "{:s}".format(chr(i))
 
-print()  # To print a new line at the end (optional)
+print(output)
