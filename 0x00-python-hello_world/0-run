@@ -1,4 +1,3 @@
 #!/bin/bash
-
-# Run the Python script
+Run the Python script
 pyton3 $PYFILE
